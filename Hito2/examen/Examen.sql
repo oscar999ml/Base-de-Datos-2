@@ -190,7 +190,6 @@ end;
 select getEditorial('IBRANI',90) as IBRANI_90;
 
 
-
 create or replace function get_par_impar(pags int)
 returns varchar(20)
 begin
@@ -201,6 +200,7 @@ end;
 
 SELECT get_par_impar(8);
 
+#Modulo = CASE WHEN Count(*) % 2 = 0 THEN 'Par' ELSE 'Impar' END
 
 create or replace function getV1(editorial varchar(20),categoria varchar(20))
 returns varchar(40)
